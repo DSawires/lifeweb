@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Style | Luxury Furniture</title>
+    <meta name="description" content="Life Style - Bespoke luxury furniture for hospitality projects and refined homes. Where elegance meets living.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-content">
+            <img src="public/images/Logo.png" alt="Life Style" class="loading-logo">
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="public/images/Logo.png" alt="Life Style" class="logo-img">
+                <span class="logo-text">LIFE STYLE</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="collections.html" class="nav-link">Collections</a></li>
+                <li><a href="hospitality.html" class="nav-link">Hospitality</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link nav-link-cta">Get in Touch</a></li>
+            </ul>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Slideshow -->
+    <section class="hero" id="hero">
+        <div class="slideshow">
+            <div class="slide active">
+                <img src="public/images/slides/1.jpg" alt="Luxury Furniture">
+            </div>
+            <div class="slide">
+                <img src="public/images/slides/2.jpg" alt="Luxury Furniture">
+            </div>
+            <div class="slide">
+                <img src="public/images/slides/3.jpg" alt="Luxury Furniture">
+            </div>
+            <div class="slideshow-overlay"></div>
+        </div>
+        <div class="slideshow-nav">
+            <button class="slide-dot active" data-slide="0" aria-label="Slide 1"></button>
+            <button class="slide-dot" data-slide="1" aria-label="Slide 2"></button>
+            <button class="slide-dot" data-slide="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="collections">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Craft</span>
+                <h2 class="section-title">Curated Collections</h2>
+                <p class="section-subtitle">Each piece tells a story of timeless elegance and masterful craftsmanship</p>
+            </div>
+            <div class="collections-grid">
+                <article class="collection-card" data-animate>
+                    <div class="card-image">
+                        <img src="public/images/living-room.jpg" alt="Living Spaces Collection">
+                        <div class="card-overlay">
+                            <span class="card-link">View Collection</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Living Spaces</h3>
+                        <p>Sofas, armchairs, and accent pieces that define contemporary luxury</p>
+                    </div>
+                </article>
+                <article class="collection-card" data-animate>
+                    <div class="card-image">
+                        <img src="public/images/dining-room.jpg" alt="Dining Collection">
+                        <div class="card-overlay">
+                            <span class="card-link">View Collection</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Dining & Entertaining</h3>
+                        <p>Tables and seating designed for memorable gatherings</p>
+                    </div>
+                </article>
+                <article class="collection-card" data-animate>
+                    <div class="card-image">
+                        <img src="public/images/bedroom.jpg" alt="Bedroom Collection">
+                        <div class="card-overlay">
+                            <span class="card-link">View Collection</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Bedroom Sanctuary</h3>
+                        <p>Beds and furnishings for the ultimate retreat</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hospitality Section -->
+    <section id="hospitality" class="hospitality">
+        <div class="hospitality-bg">
+            <img src="public/images/project-1.jpg" alt="Hospitality Project">
+        </div>
+        <div class="hospitality-overlay"></div>
+        <div class="container">
+            <div class="hospitality-inner" data-animate>
+                <span class="section-label">Hospitality</span>
+                <h2 class="hospitality-title">Crafting Extraordinary Spaces for the World's Finest Hotels</h2>
+                <p class="hospitality-subtitle">Three decades of partnership with leading hospitality brands across 25+ countries</p>
+                <div class="hospitality-stats">
+                    <div class="hospitality-stat">
+                        <span class="hospitality-stat-number" data-count="150">0</span>
+                        <span class="hospitality-stat-label">Hotels Furnished</span>
+                    </div>
+                    <div class="hospitality-stat">
+                        <span class="hospitality-stat-number" data-count="25">0</span>
+                        <span class="hospitality-stat-label">Countries</span>
+                    </div>
+                    <div class="hospitality-stat">
+                        <span class="hospitality-stat-number" data-count="30">0</span>
+                        <span class="hospitality-stat-label">Years</span>
+                    </div>
+                </div>
+                <a href="hospitality.html" class="btn btn-outline">View Projects</a>
+            </div>
+        </div>
+        <div class="hospitality-partners">
+            <div class="container">
+                <div class="partners-row">
+                    <img src="public/images/brands/marriott.png" alt="Marriott">
+                    <img src="public/images/brands/rotana.png" alt="Rotana">
+                    <img src="public/images/brands/steigenberger.png" alt="Steigenberger">
+                    <img src="public/images/brands/jaz.png" alt="JAZ Hotels">
+                    <img src="public/images/brands/emaar.png" alt="Emaar">
+                    <img src="public/images/brands/orascom.png" alt="Orascom">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image" data-animate>
+                    <div class="image-frame">
+                        <img src="public/images/about-image.jpg" alt="Life Style Craftsmanship">
+                    </div>
+                    <div class="accent-frame"></div>
+                </div>
+                <div class="about-content" data-animate>
+                    <span class="section-label">Our Philosophy</span>
+                    <h2 class="section-title">The Art of Living</h2>
+                    <p class="about-text">
+                        For three decades, Life Style has been synonymous with uncompromising quality
+                        and refined aesthetics. Our master artisans blend traditional techniques with
+                        contemporary design, creating pieces that transcend trends.
+                    </p>
+                    <p class="about-text">
+                        Every piece of furniture we create is a testament to our belief that
+                        exceptional design should enhance daily life, bringing beauty and
+                        functionality into perfect harmony.
+                    </p>
+                    <div class="about-signature">
+                        <div class="signature-line"></div>
+                        <span>Established 1994</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info" data-animate>
+                    <span class="section-label">Get in Touch</span>
+                    <h2 class="section-title">Let's Create Together</h2>
+                    <p>Whether you're furnishing a boutique hotel or curating your private residence,
+                       our design consultants are ready to bring your vision to life.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:info@lifestyle-furniture.com">info@lifestyle-furniture.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Phone</span>
+                            <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Showroom</span>
+                            <address>123 Design District<br>New York, NY 10001</address>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm" data-animate>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="inquiry" name="inquiry" required>
+                            <option value="" disabled selected></option>
+                            <option value="residential">Residential Project</option>
+                            <option value="hospitality">Hospitality Project</option>
+                            <option value="catalog">Product Catalog</option>
+                            <option value="other">Other Inquiry</option>
+                        </select>
+                        <label for="inquiry">Inquiry Type</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="public/images/Logo.png" alt="Life Style" class="logo-img">
+                        <span class="logo-text">LIFE STYLE</span>
+                    </a>
+                    <p>Luxury furniture for exceptional spaces</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Collections</h4>
+                        <ul>
+                            <li><a href="#">Living</a></li>
+                            <li><a href="#">Dining</a></li>
+                            <li><a href="#">Bedroom</a></li>
+                            <li><a href="#">Outdoor</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Hospitality</a></li>
+                            <li><a href="#">Bespoke Design</a></li>
+                            <li><a href="#">Consultation</a></li>
+                            <li><a href="#">Installation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Life Style. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Pinterest">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4c0 2.2-1.8 4-4 4"/>
+                            <path d="M12 12v8"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="2"/>
+                            <path d="M7 11v6M7 7v.01M11 11v6m0-3a3 3 0 1 1 6 0v3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
