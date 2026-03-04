@@ -457,6 +457,7 @@ ul {
     position: relative;
     cursor: pointer;
     overflow: hidden;
+    display: block;
 }
 
 .card-image {
@@ -1159,6 +1160,14 @@ ul {
 
     .collections-grid {
         grid-template-columns: 1fr;
+    }
+
+    .collection-card .card-overlay {
+        opacity: 1;
+    }
+
+    .collection-card .card-link {
+        transform: translateY(0);
     }
 
     .hero-title {
