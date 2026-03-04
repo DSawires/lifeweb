@@ -9,8 +9,8 @@
 /* Custom Font */
 @font-face {
     font-family: 'Athena';
-    src: url('../public/fonts/Athena.woff2') format('woff2'),
-         url('../public/fonts/Athena.woff') format('woff');
+    src: url('../assets/fonts/Athena.woff2') format('woff2'),
+         url('../assets/fonts/Athena.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

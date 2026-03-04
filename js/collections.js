@@ -19,42 +19,42 @@ const COLLECTIONS = {
             id: 'sofas',
             name: 'Sofas',
             tagline: 'Statement pieces for every living space',
-            image: 'public/images/living-room.jpg',
+            image: '/assets/images/living-room.jpg',
             itemCount: 24
         },
         {
             id: 'armchairs',
             name: 'Armchairs',
             tagline: 'Comfort refined to perfection',
-            image: 'public/images/project-1.jpg',
+            image: '/assets/images/project-1.jpg',
             itemCount: 18
         },
         {
             id: 'coffee-tables',
             name: 'Coffee Tables',
             tagline: 'The heart of your living room',
-            image: 'public/images/project-2.jpg',
+            image: '/assets/images/project-2.jpg',
             itemCount: 15
         },
         {
             id: 'tv-units',
             name: 'TV Units',
             tagline: 'Modern entertainment solutions',
-            image: 'public/images/project-3.jpg',
+            image: '/assets/images/project-3.jpg',
             itemCount: 12
         },
         {
             id: 'bookcases',
             name: 'Bookcases & Shelving',
             tagline: 'Display and organize in style',
-            image: 'public/images/project-4.jpg',
+            image: '/assets/images/project-4.jpg',
             itemCount: 10
         },
         {
             id: 'accent-furniture',
             name: 'Accent Furniture',
             tagline: 'Finishing touches that define',
-            image: 'public/images/about-image.jpg',
+            image: '/assets/images/about-image.jpg',
             itemCount: 20
         }
     ],
@@ -63,35 +63,35 @@ const COLLECTIONS = {
             id: 'dining-tables',
             name: 'Dining Tables',
             tagline: 'Where memories are made',
-            image: 'public/images/dining-room.jpg',
+            image: '/assets/images/dining-room.jpg',
             itemCount: 16
         },
         {
             id: 'dining-chairs',
             name: 'Dining Chairs',
             tagline: 'Elegance at every seat',
-            image: 'public/images/project-1.jpg',
+            image: '/assets/images/project-1.jpg',
             itemCount: 22
         },
         {
             id: 'sideboards',
             name: 'Sideboards & Buffets',
             tagline: 'Storage meets sophistication',
-            image: 'public/images/project-2.jpg',
+            image: '/assets/images/project-2.jpg',
             itemCount: 14
         },
         {
             id: 'bar-furniture',
             name: 'Bar & Wine Storage',
             tagline: 'Entertain with distinction',
-            image: 'public/images/project-3.jpg',
+            image: '/assets/images/project-3.jpg',
             itemCount: 8
         },
         {
             id: 'dining-benches',
             name: 'Benches',
             tagline: 'Versatile seating solutions',
-            image: 'public/images/project-4.jpg',
+            image: '/assets/images/project-4.jpg',
             itemCount: 10
         }
     ],
@@ -100,42 +100,42 @@ const COLLECTIONS = {
             id: 'beds',
             name: 'Beds',
             tagline: 'The foundation of restful nights',
-            image: 'public/images/bedroom.jpg',
+            image: '/assets/images/bedroom.jpg',
             itemCount: 20
         },
         {
             id: 'nightstands',
             name: 'Nightstands',
             tagline: 'Bedside essentials',
-            image: 'public/images/project-1.jpg',
+            image: '/assets/images/project-1.jpg',
             itemCount: 16
         },
         {
             id: 'dressers',
             name: 'Dressers & Chests',
             tagline: 'Organized elegance',
-            image: 'public/images/project-2.jpg',
+            image: '/assets/images/project-2.jpg',
             itemCount: 14
         },
         {
             id: 'wardrobes',
             name: 'Wardrobes',
             tagline: 'Space for your finest',
-            image: 'public/images/project-3.jpg',
+            image: '/assets/images/project-3.jpg',
             itemCount: 12
         },
         {
             id: 'vanities',
             name: 'Vanities',
             tagline: 'Beauty in preparation',
-            image: 'public/images/project-4.jpg',
+            image: '/assets/images/project-4.jpg',
             itemCount: 8
         },
         {
             id: 'bedroom-seating',
             name: 'Bedroom Seating',
             tagline: 'Benches, ottomans & chairs',
-            image: 'public/images/about-image.jpg',
+            image: '/assets/images/about-image.jpg',
             itemCount: 10
         }
     ]

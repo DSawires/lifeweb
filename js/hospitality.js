@@ -26,7 +26,7 @@ const PROJECTS = [
         title: "Sifawy Boutique Hotel",
         location: "Jebel Sifah Marina, Oman",
         description: "Italian-designed boutique retreat blending contemporary European aesthetics with authentic Omani heritage, set within a world-class marina resort.",
-        image: "public/images/projects/sifawy-boutique-hotel/hero.jpg",
+        image: "/assets/images/projects/sifawy-boutique-hotel/hero.jpg",
         scope: ["Rooms", "Restaurant"],
         featured: true
     },
@@ -36,7 +36,7 @@ const PROJECTS = [
         title: "One Almaza Bay",
         location: "North Coast, Egypt",
         description: "Egypt's premier Mediterranean destination spanning 6.5 million sqm, featuring pristine beaches and refined coastal living.",
-        image: "public/images/projects/one-almaza-bay/hero.jpg",
+        image: "/assets/images/projects/one-almaza-bay/hero.jpg",
         scope: ["Rooms", "Wardrobes"],
         featured: true
     },
@@ -46,7 +46,7 @@ const PROJECTS = [
         title: "JAZ Elite Asteria",
         location: "Sahl Hasheesh, Egypt",
         description: "Ultra-modern Red Sea resort with 633 rooms, aquapark, private jetty, and six signature dining venues along Sahl Hasheesh's crystal waters.",
-        image: "public/images/projects/jaz-elite-asteria/hero.jpg",
+        image: "/assets/images/projects/jaz-elite-asteria/hero.jpg",
         scope: ["Reception", "Restaurants", "Bar"]
     },
     {
@@ -55,7 +55,7 @@ const PROJECTS = [
         title: "JAZ Elite Riviera",
         location: "Marsa Alam, Egypt",
         description: "Luxury coastal haven on Marsa Mares Bay, renowned for green sea turtle sightings and rare dugong encounters just steps from shore.",
-        image: "public/images/projects/jaz-elite-riviera/hero.jpg",
+        image: "/assets/images/projects/jaz-elite-riviera/hero.jpg",
         scope: ["Reception", "Restaurants", "Lounge"]
     },
     {
@@ -64,7 +64,7 @@ const PROJECTS = [
         title: "Sakhra Hotel & Spa",
         location: "Almaza Bay, Egypt",
         description: "Modern ode to Mediterranean elegance sculpted from stone, featuring rooftop pools, hammam spa rituals, and direct beachfront access.",
-        image: "public/images/projects/sakhra-hotel-spa/hero.jpg",
+        image: "/assets/images/projects/sakhra-hotel-spa/hero.jpg",
         scope: ["Hotel", "Spa"]
     },
     {
@@ -73,7 +73,7 @@ const PROJECTS = [
         title: "Giza Palace",
         location: "Sheikh Zayed, Egypt",
         description: "Leading Hotels of the World member featuring a 1,900 sqm luxury spa, diverse international cuisine, and proximity to the Great Pyramids.",
-        image: "public/images/projects/giza-palace/hero.jpg",
+        image: "/assets/images/projects/giza-palace/hero.jpg",
         scope: ["Rooms", "Restaurants", "Meeting Rooms", "Ballroom"],
         featured: true
     },
@@ -83,7 +83,7 @@ const PROJECTS = [
         title: "JAZ Elite Amara",
         location: "Marsa Alam, Egypt",
         description: "Five-star beachfront escape on the southern Red Sea, offering world-class diving and pristine coral reef access.",
-        image: "public/images/projects/jaz-elite-amara/hero.jpg",
+        image: "/assets/images/projects/jaz-elite-amara/hero.jpg",
         scope: ["Doors", "Reception", "Restaurants"]
     },
     {
@@ -92,7 +92,7 @@ const PROJECTS = [
         title: "Cleopatra Luxury Resort",
         location: "Sharm El Sheikh, Egypt",
         description: "All-inclusive resort nestled along Sharm's coastline with panoramic Red Sea views and diverse dining experiences.",
-        image: "public/images/projects/cleopatra-luxury-resort/hero.jpg",
+        image: "/assets/images/projects/cleopatra-luxury-resort/hero.jpg",
         scope: ["Reception", "Restaurant", "Bar"]
     },
     {
@@ -101,7 +101,7 @@ const PROJECTS = [
         title: "Mazeej White Hotel",
         location: "Hacienda, Egypt",
         description: "Exclusive North Coast residence within the renowned Hacienda development, offering refined Mediterranean living.",
-        image: "public/images/projects/mazeej-white-hotel/hero.jpg",
+        image: "/assets/images/projects/mazeej-white-hotel/hero.jpg",
         scope: ["Bedroom", "Outdoor"]
     },
     {
@@ -110,7 +110,7 @@ const PROJECTS = [
         title: "The Chedi",
         location: "El Gouna, Egypt",
         description: "Egypt's first Leading Hotel of the World — an GHM-managed sanctuary blending Asian-inspired wellness with Red Sea sophistication.",
-        image: "public/images/projects/the-chedi/hero.jpg",
+        image: "/assets/images/projects/the-chedi/hero.jpg",
         scope: ["Villas", "Spa", "Restaurant"]
     },
     {
@@ -119,7 +119,7 @@ const PROJECTS = [
         title: "The Cove Rotana Resort",
         location: "Ras Al Khaimah, UAE",
         description: "Five-star Arabian Gulf retreat with 349 rooms, 40 villas, and 600 meters of private sandy beach on an idyllic water inlet.",
-        image: "public/images/projects/the-cove-rotana/hero.jpg",
+        image: "/assets/images/projects/the-cove-rotana/hero.jpg",
         scope: ["Rooms", "Furniture"]
     },
     {
@@ -128,7 +128,7 @@ const PROJECTS = [
         title: "Steigenberger Resort",
         location: "Ras Soma, Egypt",
         description: "Red Sea gem featuring Olympic pools, five signature restaurants, and a diving center along Egypt's golden eastern coast.",
-        image: "public/images/projects/steigenberger-resort-ras-soma/hero.jpg",
+        image: "/assets/images/projects/steigenberger-resort-ras-soma/hero.jpg",
         scope: ["Doors", "Suites", "Public Area"]
     },
     {
@@ -137,7 +137,7 @@ const PROJECTS = [
         title: "The Grand Hotel",
         location: "Hurghada, Egypt",
         description: "Landmark Hurghada property offering classic Red Sea hospitality with expansive facilities and beach access.",
-        image: "public/images/projects/the-grand-hotel-hurghada/hero.jpg",
+        image: "/assets/images/projects/the-grand-hotel-hurghada/hero.jpg",
         scope: ["Doors", "Reception", "Restaurant"]
     },
     {
@@ -146,7 +146,7 @@ const PROJECTS = [
         title: "Cleopatra Sidi Henish",
         location: "North Coast, Egypt",
         description: "Mediterranean escape along Egypt's stunning North Coast, known for turquoise waters and white sandy beaches.",
-        image: "public/images/projects/cleopatra-sidi-henish/hero.jpg",
+        image: "/assets/images/projects/cleopatra-sidi-henish/hero.jpg",
         scope: ["Furniture", "Custom"]
     },
     {
@@ -155,7 +155,7 @@ const PROJECTS = [
         title: "Sheraton Miramar Resort",
         location: "El Gouna, Egypt",
         description: "Award-winning Michael Graves architecture spanning nine islands connected by wooden bridges, with ancient Egyptian-inspired design.",
-        image: "public/images/projects/sheraton-miramar-resort/hero.jpg",
+        image: "/assets/images/projects/sheraton-miramar-resort/hero.jpg",
         scope: ["Rooms", "Villas", "Restaurant"]
     },
     {
@@ -164,7 +164,7 @@ const PROJECTS = [
         title: "Ali Pasha",
         location: "El Gouna, Egypt",
         description: "Charming boutique hotel in El Gouna's vibrant downtown, steps from Abu Tig Marina's restaurants and nightlife.",
-        image: "public/images/projects/ali-pasha/hero.jpg",
+        image: "/assets/images/projects/ali-pasha/hero.jpg",
         scope: ["Rooms", "Reception", "Restaurant"]
     },
     {
@@ -173,7 +173,7 @@ const PROJECTS = [
         title: "Cook's Club Resort",
         location: "El Gouna, Egypt",
         description: "Adults-only lagoon retreat with 144 minimalist rooms, private beach, rooftop DJ sessions, and direct paddleboard access to El Gouna's saltwater lagoon.",
-        image: "public/images/projects/cooks-club/hero.jpg",
+        image: "/assets/images/projects/cooks-club/hero.jpg",
         scope: ["Rooms", "Public Area"]
     },
     {
@@ -182,7 +182,7 @@ const PROJECTS = [
         title: "El Fanar Hotel & Residences",
         location: "Oman",
         description: "Five-star Hawana Salalah property overlooking the Arabian Sea, offering luxury residences and world-class amenities.",
-        image: "public/images/projects/el-fanar-hotel/hero.jpg",
+        image: "/assets/images/projects/el-fanar-hotel/hero.jpg",
         scope: ["Public Area", "Restaurant"]
     },
     {
@@ -191,7 +191,7 @@ const PROJECTS = [
         title: "Steigenberger Resort Alaya",
         location: "Marsa Alam, Egypt",
         description: "Tranquil Red Sea sanctuary surrounded by pristine reefs, ideal for diving enthusiasts and beach seekers alike.",
-        image: "public/images/projects/steigenberger-resort-alaya/hero.jpg",
+        image: "/assets/images/projects/steigenberger-resort-alaya/hero.jpg",
         scope: ["Reception", "Restaurants", "Beach"]
     },
     {
@@ -200,7 +200,7 @@ const PROJECTS = [
         title: "Casa Cook",
         location: "El Gouna, Egypt",
         description: "Award-winning adults-only boutique hotel inspired by Bedouin aesthetics, blending earthy textures with minimalist architecture.",
-        image: "public/images/projects/casa-cook/hero.jpg",
+        image: "/assets/images/projects/casa-cook/hero.jpg",
         scope: ["Rooms", "Public Area"]
     },
     {
@@ -209,7 +209,7 @@ const PROJECTS = [
         title: "Steigenberger Alcazar",
         location: "Sharm El Sheikh, Egypt",
         description: "Nabq Bay landmark with 30,000 sqm private beach, heated pools, and five specialty restaurants overlooking pristine coral reefs.",
-        image: "public/images/projects/steigenberger-alcazar/hero.jpg",
+        image: "/assets/images/projects/steigenberger-alcazar/hero.jpg",
         scope: ["Doors", "Spa", "Restaurants"]
     },
     {
@@ -218,7 +218,7 @@ const PROJECTS = [
         title: "JAZ Aquaviva",
         location: "Makadi, Egypt",
         description: "Family resort featuring Makadi Water World with 50 water slides, 18-hole championship golf, and direct beach access.",
-        image: "public/images/projects/jaz-aquaviva/hero.jpg",
+        image: "/assets/images/projects/jaz-aquaviva/hero.jpg",
         scope: ["Doors", "Spa", "Restaurants"]
     },
     {
@@ -227,7 +227,7 @@ const PROJECTS = [
         title: "Miramar Al Aqah Beach Resort",
         location: "Fujairah, UAE",
         description: "Beachfront retreat on Fujairah's eastern coast, offering dramatic Hajar Mountain backdrops and Arabian Gulf waters.",
-        image: "public/images/projects/miramar-al-aqah/hero.jpg",
+        image: "/assets/images/projects/miramar-al-aqah/hero.jpg",
         scope: ["Suites", "Furniture"]
     },
     {
@@ -236,7 +236,7 @@ const PROJECTS = [
         title: "JAZ Mirabel Beach Resort",
         location: "Sharm El Sheikh, Egypt",
         description: "Established Sharm resort known for its house reef, vibrant marine life, and family-friendly atmosphere.",
-        image: "public/images/projects/jaz-mirabel-beach/hero.jpg",
+        image: "/assets/images/projects/jaz-mirabel-beach/hero.jpg",
         scope: ["Public Area"]
     },
     {
@@ -245,7 +245,7 @@ const PROJECTS = [
         title: "JAZ Belvedere",
         location: "Sharm El Sheikh, Egypt",
         description: "Five-star clifftop resort with panoramic Red Sea views and direct access to world-renowned diving sites.",
-        image: "public/images/projects/jaz-belvedere/hero.jpg",
+        image: "/assets/images/projects/jaz-belvedere/hero.jpg",
         scope: ["Public Area"]
     },
     {
@@ -254,7 +254,7 @@ const PROJECTS = [
         title: "JAZ Aquamarine Resort",
         location: "Hurghada, Egypt",
         description: "Sprawling Hurghada resort with extensive pools, diverse dining, and a prime beachfront location on the Red Sea.",
-        image: "public/images/projects/jaz-aquamarine/hero.jpg",
+        image: "/assets/images/projects/jaz-aquamarine/hero.jpg",
         scope: ["Doors", "Reception", "Restaurants"]
     },
     {
@@ -263,7 +263,7 @@ const PROJECTS = [
         title: "The Grand Hotel",
         location: "Sharm El Sheikh, Egypt",
         description: "Classic Sharm El Sheikh property offering timeless Red Sea hospitality in the heart of Egypt's premier diving destination.",
-        image: "public/images/projects/the-grand-hotel-sharm/hero.jpg",
+        image: "/assets/images/projects/the-grand-hotel-sharm/hero.jpg",
         scope: ["Rooms", "Restaurant", "Bar"]
     },
     {
@@ -272,7 +272,7 @@ const PROJECTS = [
         title: "Marassi",
         location: "North Coast, Egypt",
         description: "Emaar's flagship Mediterranean destination spanning 6.5 million sqm with nine international hotels, an 18-hole golf course, and the largest marina in the Middle East.",
-        image: "public/images/projects/marassi/hero.jpg",
+        image: "/assets/images/projects/marassi/hero.jpg",
         scope: ["Doors", "Cladding", "Wardrobes", "Kitchens", "Outdoor"]
     }
 ];
