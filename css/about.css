@@ -1,0 +1,445 @@
+/* ============================================
+   ABOUT PAGE STYLES
+   ============================================ */
+
+/* Hero Section */
+.about-hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.about-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.about-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(34, 31, 33, 0.6) 0%,
+        rgba(34, 31, 33, 0.8) 100%
+    );
+    z-index: 1;
+}
+
+.about-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 4rem;
+}
+
+.about-hero-content .section-label {
+    color: var(--color-gold);
+}
+
+.about-hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 400;
+    color: var(--color-light);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.about-hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+}
+
+/* Story Section */
+.story-section {
+    padding: 8rem 0;
+    background-color: var(--color-light);
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 6rem;
+    align-items: start;
+}
+
+.story-content .section-label {
+    margin-bottom: 0.75rem;
+}
+
+.story-content .section-title {
+    margin-bottom: 2rem;
+}
+
+.story-text {
+    font-size: 1.0625rem;
+    line-height: 1.9;
+    color: var(--color-gray-600);
+    margin-bottom: 1.5rem;
+}
+
+.story-text:last-of-type {
+    margin-bottom: 0;
+}
+
+.story-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 3rem;
+    background: var(--color-gray-100);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--color-gold);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-gray-600);
+}
+
+/* Values Section */
+.values-section {
+    padding: 8rem 0;
+    background-color: var(--color-gray-100);
+}
+
+.values-section .section-header {
+    margin-bottom: 4rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+}
+
+.value-card {
+    background: var(--color-light);
+    padding: 2.5rem;
+    text-align: center;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.value-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    color: var(--color-gold);
+}
+
+.value-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+.value-description {
+    font-size: 0.9375rem;
+    font-weight: 300;
+    color: var(--color-gray-600);
+    line-height: 1.7;
+}
+
+/* Craftsmanship Section */
+.craftsmanship-section {
+    position: relative;
+    padding: 8rem 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.craftsmanship-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.craftsmanship-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.craftsmanship-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(34, 31, 33, 0.95) 0%,
+        rgba(34, 31, 33, 0.7) 50%,
+        rgba(34, 31, 33, 0.4) 100%
+    );
+    z-index: 1;
+}
+
+.craftsmanship-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.craftsmanship-content {
+    max-width: 600px;
+}
+
+.craftsmanship-content .section-label {
+    color: var(--color-gold);
+}
+
+.craftsmanship-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 400;
+    color: var(--color-light);
+    margin-bottom: 1.5rem;
+}
+
+.craftsmanship-text {
+    font-size: 1.0625rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.craftsmanship-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.craft-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.craft-number {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--color-gold);
+    min-width: 40px;
+}
+
+.craft-detail h4 {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--color-light);
+    margin-bottom: 0.25rem;
+}
+
+.craft-detail p {
+    font-size: 0.9375rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Partners Section */
+.partners-section {
+    padding: 8rem 0;
+    background-color: var(--color-light);
+}
+
+.partners-section .section-header {
+    margin-bottom: 4rem;
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3rem;
+    align-items: center;
+}
+
+.partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.partner-logo img {
+    max-width: 100%;
+    max-height: 40px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: all var(--transition-base);
+}
+
+.partner-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* CTA Section (from collections.css) */
+.cta-section {
+    padding: 6rem 0;
+    background: var(--color-dark);
+}
+
+.cta-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 400;
+    color: var(--color-light);
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.0625rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+/* Active Nav State */
+.nav-link.active {
+    color: var(--color-gold) !important;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .story-stats {
+        max-width: 500px;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        min-height: 60vh;
+    }
+
+    .about-hero-content {
+        padding-top: 3rem;
+    }
+
+    .story-section,
+    .values-section,
+    .partners-section {
+        padding: 5rem 0;
+    }
+
+    .story-stats {
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .value-card {
+        padding: 2rem;
+    }
+
+    .craftsmanship-section {
+        min-height: auto;
+        padding: 5rem 0;
+    }
+
+    .craftsmanship-overlay {
+        background: rgba(34, 31, 33, 0.9);
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .partner-logo img {
+        max-height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .story-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}

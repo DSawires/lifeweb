@@ -79,20 +79,6 @@ const COLLECTIONS = {
             tagline: 'Storage meets sophistication',
             image: '/assets/images/project-2.jpg',
             itemCount: 14
-        },
-        {
-            id: 'bar-furniture',
-            name: 'Bar & Wine Storage',
-            tagline: 'Entertain with distinction',
-            image: '/assets/images/project-3.jpg',
-            itemCount: 8
-        },
-        {
-            id: 'dining-benches',
-            name: 'Benches',
-            tagline: 'Versatile seating solutions',
-            image: '/assets/images/project-4.jpg',
-            itemCount: 10
         }
     ],
     bedroom: [
@@ -158,7 +144,7 @@ function renderCollections() {
         if (!grid) return;
 
         const items = COLLECTIONS[category];
-        const html = items.map(item => createSubcategoryCard(item)).join('');
+        const html = items.map(item => createSubcategoryCard(item, category)).join('');
         grid.innerHTML = html;
     });
 }
@@ -166,9 +152,9 @@ function renderCollections() {
 /**
  * Create subcategory card HTML
  */
-function createSubcategoryCard(item) {
+function createSubcategoryCard(item, category) {
     return `
-        <article class="subcategory-card" data-id="${item.id}">
+        <a href="/collections/${category}/${item.id}/" class="subcategory-card" data-id="${item.id}">
             <div class="subcategory-image">
                 <img src="${item.image}" alt="${item.name}">
                 <div class="subcategory-overlay">
@@ -185,7 +171,7 @@ function createSubcategoryCard(item) {
                 <h3 class="subcategory-name">${item.name}</h3>
                 <p class="subcategory-tagline">${item.tagline}</p>
             </div>
-        </article>
+        </a>
     `;
 }
 
