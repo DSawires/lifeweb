@@ -19,6 +19,7 @@
  *   - scope: Array of tags (e.g., ['Lobby', 'Rooms', 'Restaurant'])
  *   - featured: Set to true to show in carousel
  *   - galleryCount: Number of gallery images (1.jpg, 2.jpg, etc.)
+ *   - galleryFormat: Image format for gallery (jpg, png, or webp) - defaults to jpg
  */
 
 const PROJECTS = [
@@ -126,9 +127,7 @@ const PROJECTS = [
         description: "Egypt's first Leading Hotel of the World — an GHM-managed sanctuary blending Asian-inspired wellness with Red Sea sophistication.",
         image: "/assets/images/projects/the-chedi/hero.jpg",
         folder: "the-chedi",
-        scope: ["Villas", "Spa", "Restaurant"],
-        featured: true,
-        galleryCount: 0
+        scope: ["Villas", "Spa", "Restaurant"]
     },
     {
         id: 12,
@@ -198,7 +197,10 @@ const PROJECTS = [
         description: "Adults-only lagoon retreat with 144 minimalist rooms, private beach, rooftop DJ sessions, and direct paddleboard access to El Gouna's saltwater lagoon.",
         image: "/assets/images/projects/cooks-club/hero.jpg",
         folder: "cooks-club",
-        scope: ["Rooms", "Public Area"]
+        scope: ["Rooms", "Public Area"],
+        featured: true,
+        galleryCount: 5,
+        galleryFormat: "webp"
     },
     {
         id: 18,
@@ -343,7 +345,7 @@ function renderFeaturedCarousel() {
 
     const html = featuredProjects.map((project, index) => `
         <div class="carousel-slide ${index === 0 ? 'active' : ''}" data-index="${index}">
-            <article class="carousel-card" data-project-id="${project.id}" data-folder="${project.folder}" data-gallery-count="${project.galleryCount || 0}">
+            <article class="carousel-card" data-project-id="${project.id}" data-folder="${project.folder}" data-gallery-count="${project.galleryCount || 0}" data-gallery-format="${project.galleryFormat || 'jpg'}">
                 <div class="carousel-card-image">
                     <img src="${project.image}" alt="${project.title}">
                 </div>
@@ -460,6 +462,7 @@ function openGallery(card) {
     const projectId = card.dataset.projectId;
     const folder = card.dataset.folder;
     const galleryCount = parseInt(card.dataset.galleryCount) || 0;
+    const galleryFormat = card.dataset.galleryFormat || 'jpg';
 
     const project = PROJECTS.find(p => p.id === parseInt(projectId));
     if (!project) return;
@@ -467,9 +470,9 @@ function openGallery(card) {
     // Build gallery images array
     currentGalleryImages = [project.image]; // Start with hero image
 
-    // Add numbered gallery images
+    // Add numbered gallery images (supports jpg, png, or webp)
     for (let i = 1; i <= galleryCount; i++) {
-        currentGalleryImages.push(`/assets/images/projects/${folder}/${i}.jpg`);
+        currentGalleryImages.push(`/assets/images/projects/${folder}/${i}.${galleryFormat}`);
     }
 
     currentGalleryIndex = 0;
@@ -594,6 +597,14 @@ function renderTimeline() {
                         ${project.scope.map(tag => `<span class="timeline-tag">${tag}</span>`).join('')}
                     </div>
                 ` : ''}
+                ${project.featured && project.galleryCount > 0 ? `
+                    <button class="timeline-gallery-btn" data-project-id="${project.id}" data-folder="${project.folder}" data-gallery-count="${project.galleryCount}" data-gallery-format="${project.galleryFormat || 'jpg'}">
+                        Explore Gallery
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                ` : ''}
             </div>
             <div class="timeline-image">
                 <img src="${project.image}" alt="${project.title}" loading="lazy">
@@ -602,6 +613,14 @@ function renderTimeline() {
     `).join('');
 
     container.innerHTML = html;
+
+    // Add click handlers for gallery buttons
+    container.querySelectorAll('.timeline-gallery-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openGallery(btn);
+        });
+    });
 }
 
 /**
