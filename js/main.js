@@ -39,6 +39,8 @@ function initNavbar() {
     const navbar = document.getElementById('navbar');
     const hero = document.querySelector('.hero');
 
+    if (!navbar) return;
+
     // If no hero section (internal pages), keep navbar always scrolled
     if (!hero) {
         navbar.classList.add('scrolled');
@@ -141,6 +143,9 @@ function initSlideshow() {
 function initMobileMenu() {
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
+
+    if (!menuToggle || !navMenu) return;
+
     const navLinks = navMenu.querySelectorAll('.nav-link');
 
     menuToggle.addEventListener('click', () => {

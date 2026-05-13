@@ -290,10 +290,13 @@
 }
 
 .partners-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem 4rem;
     align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .partner-logo {
@@ -301,20 +304,23 @@
     align-items: center;
     justify-content: center;
     padding: 1.5rem;
+    flex: 0 0 calc(33.333% - 3rem);
+}
+
+.partner-logo:nth-child(4),
+.partner-logo:nth-child(5) {
+    flex: 0 0 calc(40% - 2rem);
 }
 
 .partner-logo img {
     max-width: 100%;
-    max-height: 40px;
+    max-height: 60px;
     object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.5;
     transition: all var(--transition-base);
 }
 
 .partner-logo:hover img {
-    filter: grayscale(0%);
-    opacity: 1;
+    transform: scale(1.05);
 }
 
 /* CTA Section (from collections.css) */
@@ -372,7 +378,7 @@
     }
 
     .partners-grid {
-        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
     }
 }
 
@@ -419,12 +425,11 @@
     }
 
     .partners-grid {
-        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
 
     .partner-logo img {
-        max-height: 30px;
+        max-height: 45px;
     }
 }
 
@@ -439,7 +444,6 @@
     }
 
     .partners-grid {
-        grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
     }
 }
