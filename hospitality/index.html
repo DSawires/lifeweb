@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospitality Projects | Life Style</title>
-    <meta name="description" content="Explore Life Style's portfolio of luxury hospitality projects. World-class furniture for hotels, resorts, and restaurants worldwide.">
+    <meta name="description" content="Explore Life Style's portfolio of luxury hospitality projects. World-class furniture for hotels, resorts, and restaurants.">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/hospitality.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,18 +33,63 @@
         </div>
     </header>
 
-    <!-- Featured Projects -->
+    <!-- Featured Projects Carousel -->
     <section class="featured-projects">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Highlights</span>
                 <h2 class="section-title">Featured Projects</h2>
             </div>
-            <div class="featured-grid" id="featured-grid">
-                <!-- Featured projects will be injected by JavaScript -->
+            <div class="carousel-wrapper">
+                <div class="carousel-container" id="featured-carousel">
+                    <!-- Carousel slides will be injected by JavaScript -->
+                </div>
+                <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </button>
+                <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next slide">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="carousel-dots" id="carousel-dots">
+                <!-- Dots will be injected by JavaScript -->
             </div>
         </div>
     </section>
+
+    <!-- Gallery Modal -->
+    <div class="gallery-modal" id="gallery-modal">
+        <div class="gallery-backdrop"></div>
+        <div class="gallery-content">
+            <button class="gallery-close" id="gallery-close" aria-label="Close gallery">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="gallery-header">
+                <h3 class="gallery-title" id="gallery-title"></h3>
+                <span class="gallery-location" id="gallery-location"></span>
+            </div>
+            <div class="gallery-image-container">
+                <button class="gallery-nav gallery-prev" id="gallery-prev" aria-label="Previous image">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </button>
+                <img class="gallery-image" id="gallery-image" src="" alt="Gallery image">
+                <button class="gallery-nav gallery-next" id="gallery-next" aria-label="Next image">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="gallery-counter" id="gallery-counter"></div>
+        </div>
+    </div>
 
     <!-- Timeline Section -->
     <section class="timeline-section">
@@ -66,7 +111,7 @@
             <div class="cta-content">
                 <h2>Start Your Project</h2>
                 <p>Ready to transform your hospitality space? Our team is here to bring your vision to life.</p>
-                <a href="/#contact" class="btn btn-primary">Get in Touch</a>
+                <a href="/contact/" class="btn btn-primary">Get in Touch</a>
             </div>
         </div>
     </section>

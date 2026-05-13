@@ -11,12 +11,14 @@
  *   - year: Year completed (number)
  *   - title: Project name
  *   - location: City, Country
- *   - image: Path to image
+ *   - image: Path to hero image
+ *   - folder: Folder name in /assets/images/projects/
  *
  * Optional fields:
  *   - description: Short description
  *   - scope: Array of tags (e.g., ['Lobby', 'Rooms', 'Restaurant'])
- *   - featured: Set to true to show in featured section (max 4)
+ *   - featured: Set to true to show in carousel
+ *   - galleryCount: Number of gallery images (1.jpg, 2.jpg, etc.)
  */
 
 const PROJECTS = [
@@ -27,8 +29,8 @@ const PROJECTS = [
         location: "Jebel Sifah Marina, Oman",
         description: "Italian-designed boutique retreat blending contemporary European aesthetics with authentic Omani heritage, set within a world-class marina resort.",
         image: "/assets/images/projects/sifawy-boutique-hotel/hero.jpg",
-        scope: ["Rooms", "Restaurant"],
-        featured: true
+        folder: "sifawy-boutique-hotel",
+        scope: ["Rooms", "Restaurant"]
     },
     {
         id: 2,
@@ -37,8 +39,8 @@ const PROJECTS = [
         location: "North Coast, Egypt",
         description: "Egypt's premier Mediterranean destination spanning 6.5 million sqm, featuring pristine beaches and refined coastal living.",
         image: "/assets/images/projects/one-almaza-bay/hero.jpg",
-        scope: ["Rooms", "Wardrobes"],
-        featured: true
+        folder: "one-almaza-bay",
+        scope: ["Rooms", "Wardrobes"]
     },
     {
         id: 3,
@@ -47,35 +49,42 @@ const PROJECTS = [
         location: "Sahl Hasheesh, Egypt",
         description: "Ultra-modern Red Sea resort with 633 rooms, aquapark, private jetty, and six signature dining venues along Sahl Hasheesh's crystal waters.",
         image: "/assets/images/projects/jaz-elite-asteria/hero.jpg",
-        scope: ["Reception", "Restaurants", "Bar"]
+        folder: "jaz-elite-asteria",
+        scope: ["Reception", "Restaurants", "Bar"],
     },
     {
         id: 4,
+        year: 2025,
+        title: "Sakhra Hotel & Spa",
+        location: "Almaza Bay, Egypt",
+        description: "Modern ode to Mediterranean elegance sculpted from stone, featuring rooftop pools, hammam spa rituals, and direct beachfront access.",
+        image: "/assets/images/projects/sakhra-hotel-spa/hero.jpg",
+        folder: "sakhra-hotel-spa",
+        scope: ["Hotel", "Spa"],
+        featured: true,
+        galleryCount: 12
+    },
+    {
+        id: 5,
+        year: 2025,
+        title: "Giza Palace",
+        location: "Sheikh Zayed, Egypt",
+        description: "Leading Hotels of the World member featuring a 1,900 sqm luxury spa, diverse international cuisine, and proximity to the Great Pyramids.",
+        image: "/assets/images/projects/giza-palace/hero.jpg",
+        folder: "giza-palace",
+        scope: ["Rooms", "Restaurants", "Meeting Rooms", "Ballroom"],
+        featured: true,
+        galleryCount: 0
+    },
+    {
+        id: 6,
         year: 2024,
         title: "JAZ Elite Riviera",
         location: "Marsa Alam, Egypt",
         description: "Luxury coastal haven on Marsa Mares Bay, renowned for green sea turtle sightings and rare dugong encounters just steps from shore.",
         image: "/assets/images/projects/jaz-elite-riviera/hero.jpg",
+        folder: "jaz-elite-riviera",
         scope: ["Reception", "Restaurants", "Lounge"]
-    },
-    {
-        id: 5,
-        year: 2024,
-        title: "Sakhra Hotel & Spa",
-        location: "Almaza Bay, Egypt",
-        description: "Modern ode to Mediterranean elegance sculpted from stone, featuring rooftop pools, hammam spa rituals, and direct beachfront access.",
-        image: "/assets/images/projects/sakhra-hotel-spa/hero.jpg",
-        scope: ["Hotel", "Spa"]
-    },
-    {
-        id: 7,
-        year: 2023,
-        title: "Giza Palace",
-        location: "Sheikh Zayed, Egypt",
-        description: "Leading Hotels of the World member featuring a 1,900 sqm luxury spa, diverse international cuisine, and proximity to the Great Pyramids.",
-        image: "/assets/images/projects/giza-palace/hero.jpg",
-        scope: ["Rooms", "Restaurants", "Meeting Rooms", "Ballroom"],
-        featured: true
     },
     {
         id: 8,
@@ -84,6 +93,7 @@ const PROJECTS = [
         location: "Marsa Alam, Egypt",
         description: "Five-star beachfront escape on the southern Red Sea, offering world-class diving and pristine coral reef access.",
         image: "/assets/images/projects/jaz-elite-amara/hero.jpg",
+        folder: "jaz-elite-amara",
         scope: ["Doors", "Reception", "Restaurants"]
     },
     {
@@ -93,6 +103,7 @@ const PROJECTS = [
         location: "Sharm El Sheikh, Egypt",
         description: "All-inclusive resort nestled along Sharm's coastline with panoramic Red Sea views and diverse dining experiences.",
         image: "/assets/images/projects/cleopatra-luxury-resort/hero.jpg",
+        folder: "cleopatra-luxury-resort",
         scope: ["Reception", "Restaurant", "Bar"]
     },
     {
@@ -102,7 +113,10 @@ const PROJECTS = [
         location: "Hacienda, Egypt",
         description: "Exclusive North Coast residence within the renowned Hacienda development, offering refined Mediterranean living.",
         image: "/assets/images/projects/mazeej-white-hotel/hero.jpg",
-        scope: ["Bedroom", "Outdoor"]
+        folder: "mazeej-white-hotel",
+        scope: ["Bedroom", "Outdoor"],
+        featured: true,
+        galleryCount: 0
     },
     {
         id: 11,
@@ -111,7 +125,10 @@ const PROJECTS = [
         location: "El Gouna, Egypt",
         description: "Egypt's first Leading Hotel of the World — an GHM-managed sanctuary blending Asian-inspired wellness with Red Sea sophistication.",
         image: "/assets/images/projects/the-chedi/hero.jpg",
-        scope: ["Villas", "Spa", "Restaurant"]
+        folder: "the-chedi",
+        scope: ["Villas", "Spa", "Restaurant"],
+        featured: true,
+        galleryCount: 0
     },
     {
         id: 12,
@@ -120,6 +137,7 @@ const PROJECTS = [
         location: "Ras Al Khaimah, UAE",
         description: "Five-star Arabian Gulf retreat with 349 rooms, 40 villas, and 600 meters of private sandy beach on an idyllic water inlet.",
         image: "/assets/images/projects/the-cove-rotana/hero.jpg",
+        folder: "the-cove-rotana",
         scope: ["Rooms", "Furniture"]
     },
     {
@@ -129,6 +147,7 @@ const PROJECTS = [
         location: "Ras Soma, Egypt",
         description: "Red Sea gem featuring Olympic pools, five signature restaurants, and a diving center along Egypt's golden eastern coast.",
         image: "/assets/images/projects/steigenberger-resort-ras-soma/hero.jpg",
+        folder: "steigenberger-resort-ras-soma",
         scope: ["Doors", "Suites", "Public Area"]
     },
     {
@@ -138,6 +157,7 @@ const PROJECTS = [
         location: "Hurghada, Egypt",
         description: "Landmark Hurghada property offering classic Red Sea hospitality with expansive facilities and beach access.",
         image: "/assets/images/projects/the-grand-hotel-hurghada/hero.jpg",
+        folder: "the-grand-hotel-hurghada",
         scope: ["Doors", "Reception", "Restaurant"]
     },
     {
@@ -147,6 +167,7 @@ const PROJECTS = [
         location: "North Coast, Egypt",
         description: "Mediterranean escape along Egypt's stunning North Coast, known for turquoise waters and white sandy beaches.",
         image: "/assets/images/projects/cleopatra-sidi-henish/hero.jpg",
+        folder: "cleopatra-sidi-henish",
         scope: ["Furniture", "Custom"]
     },
     {
@@ -156,6 +177,7 @@ const PROJECTS = [
         location: "El Gouna, Egypt",
         description: "Award-winning Michael Graves architecture spanning nine islands connected by wooden bridges, with ancient Egyptian-inspired design.",
         image: "/assets/images/projects/sheraton-miramar-resort/hero.jpg",
+        folder: "sheraton-miramar-resort",
         scope: ["Rooms", "Villas", "Restaurant"]
     },
     {
@@ -165,6 +187,7 @@ const PROJECTS = [
         location: "El Gouna, Egypt",
         description: "Charming boutique hotel in El Gouna's vibrant downtown, steps from Abu Tig Marina's restaurants and nightlife.",
         image: "/assets/images/projects/ali-pasha/hero.jpg",
+        folder: "ali-pasha",
         scope: ["Rooms", "Reception", "Restaurant"]
     },
     {
@@ -174,6 +197,7 @@ const PROJECTS = [
         location: "El Gouna, Egypt",
         description: "Adults-only lagoon retreat with 144 minimalist rooms, private beach, rooftop DJ sessions, and direct paddleboard access to El Gouna's saltwater lagoon.",
         image: "/assets/images/projects/cooks-club/hero.jpg",
+        folder: "cooks-club",
         scope: ["Rooms", "Public Area"]
     },
     {
@@ -183,6 +207,7 @@ const PROJECTS = [
         location: "Oman",
         description: "Five-star Hawana Salalah property overlooking the Arabian Sea, offering luxury residences and world-class amenities.",
         image: "/assets/images/projects/el-fanar-hotel/hero.jpg",
+        folder: "el-fanar-hotel",
         scope: ["Public Area", "Restaurant"]
     },
     {
@@ -192,6 +217,7 @@ const PROJECTS = [
         location: "Marsa Alam, Egypt",
         description: "Tranquil Red Sea sanctuary surrounded by pristine reefs, ideal for diving enthusiasts and beach seekers alike.",
         image: "/assets/images/projects/steigenberger-resort-alaya/hero.jpg",
+        folder: "steigenberger-resort-alaya",
         scope: ["Reception", "Restaurants", "Beach"]
     },
     {
@@ -201,7 +227,10 @@ const PROJECTS = [
         location: "El Gouna, Egypt",
         description: "Award-winning adults-only boutique hotel inspired by Bedouin aesthetics, blending earthy textures with minimalist architecture.",
         image: "/assets/images/projects/casa-cook/hero.jpg",
-        scope: ["Rooms", "Public Area"]
+        folder: "casa-cook",
+        scope: ["Rooms", "Public Area"],
+        featured: true,
+        galleryCount: 12
     },
     {
         id: 21,
@@ -210,6 +239,7 @@ const PROJECTS = [
         location: "Sharm El Sheikh, Egypt",
         description: "Nabq Bay landmark with 30,000 sqm private beach, heated pools, and five specialty restaurants overlooking pristine coral reefs.",
         image: "/assets/images/projects/steigenberger-alcazar/hero.jpg",
+        folder: "steigenberger-alcazar",
         scope: ["Doors", "Spa", "Restaurants"]
     },
     {
@@ -219,6 +249,7 @@ const PROJECTS = [
         location: "Makadi, Egypt",
         description: "Family resort featuring Makadi Water World with 50 water slides, 18-hole championship golf, and direct beach access.",
         image: "/assets/images/projects/jaz-aquaviva/hero.jpg",
+        folder: "jaz-aquaviva",
         scope: ["Doors", "Spa", "Restaurants"]
     },
     {
@@ -228,6 +259,7 @@ const PROJECTS = [
         location: "Fujairah, UAE",
         description: "Beachfront retreat on Fujairah's eastern coast, offering dramatic Hajar Mountain backdrops and Arabian Gulf waters.",
         image: "/assets/images/projects/miramar-al-aqah/hero.jpg",
+        folder: "miramar-al-aqah",
         scope: ["Suites", "Furniture"]
     },
     {
@@ -237,6 +269,7 @@ const PROJECTS = [
         location: "Sharm El Sheikh, Egypt",
         description: "Established Sharm resort known for its house reef, vibrant marine life, and family-friendly atmosphere.",
         image: "/assets/images/projects/jaz-mirabel-beach/hero.jpg",
+        folder: "jaz-mirabel-beach",
         scope: ["Public Area"]
     },
     {
@@ -246,6 +279,7 @@ const PROJECTS = [
         location: "Sharm El Sheikh, Egypt",
         description: "Five-star clifftop resort with panoramic Red Sea views and direct access to world-renowned diving sites.",
         image: "/assets/images/projects/jaz-belvedere/hero.jpg",
+        folder: "jaz-belvedere",
         scope: ["Public Area"]
     },
     {
@@ -255,6 +289,7 @@ const PROJECTS = [
         location: "Hurghada, Egypt",
         description: "Sprawling Hurghada resort with extensive pools, diverse dining, and a prime beachfront location on the Red Sea.",
         image: "/assets/images/projects/jaz-aquamarine/hero.jpg",
+        folder: "jaz-aquamarine",
         scope: ["Doors", "Reception", "Restaurants"]
     },
     {
@@ -264,6 +299,7 @@ const PROJECTS = [
         location: "Sharm El Sheikh, Egypt",
         description: "Classic Sharm El Sheikh property offering timeless Red Sea hospitality in the heart of Egypt's premier diving destination.",
         image: "/assets/images/projects/the-grand-hotel-sharm/hero.jpg",
+        folder: "the-grand-hotel-sharm",
         scope: ["Rooms", "Restaurant", "Bar"]
     },
     {
@@ -273,48 +309,268 @@ const PROJECTS = [
         location: "North Coast, Egypt",
         description: "Emaar's flagship Mediterranean destination spanning 6.5 million sqm with nine international hotels, an 18-hole golf course, and the largest marina in the Middle East.",
         image: "/assets/images/projects/marassi/hero.jpg",
+        folder: "marassi",
         scope: ["Doors", "Cladding", "Wardrobes", "Kitchens", "Outdoor"]
     }
 ];
+
+// Carousel state
+let currentSlide = 0;
+let carouselInterval = null;
+let currentGalleryImages = [];
+let currentGalleryIndex = 0;
 
 /**
  * Initialize the hospitality page
  */
 document.addEventListener('DOMContentLoaded', () => {
-    renderFeaturedProjects();
+    renderFeaturedCarousel();
     renderTimeline();
     initTimelineAnimations();
+    initGalleryModal();
 });
 
 /**
- * Render featured projects
+ * Render featured projects carousel
  */
-function renderFeaturedProjects() {
-    const container = document.getElementById('featured-grid');
+function renderFeaturedCarousel() {
+    const container = document.getElementById('featured-carousel');
     if (!container) return;
 
     const featuredProjects = PROJECTS
         .filter(p => p.featured)
-        .sort((a, b) => b.year - a.year)
-        .slice(0, 4);
+        .sort((a, b) => b.year - a.year);
 
     const html = featuredProjects.map((project, index) => `
-        <article class="featured-card ${index === 0 ? 'large' : ''}">
-            <div class="featured-card-image">
-                <img src="${project.image}" alt="${project.title}">
-            </div>
-            <div class="featured-card-overlay">
-                <div class="featured-card-meta">
-                    <span class="featured-card-year">${project.year}</span>
-                    <span class="featured-card-location">${project.location}</span>
+        <div class="carousel-slide ${index === 0 ? 'active' : ''}" data-index="${index}">
+            <article class="carousel-card" data-project-id="${project.id}" data-folder="${project.folder}" data-gallery-count="${project.galleryCount || 0}">
+                <div class="carousel-card-image">
+                    <img src="${project.image}" alt="${project.title}">
                 </div>
-                <h3 class="featured-card-title">${project.title}</h3>
-                <p class="featured-card-description">${project.description || ''}</p>
-            </div>
-        </article>
+                <div class="carousel-card-overlay">
+                    <div class="carousel-card-meta">
+                        <span class="carousel-card-year">${project.year}</span>
+                        <span class="carousel-card-location">${project.location}</span>
+                    </div>
+                    <h3 class="carousel-card-title">${project.title}</h3>
+                    <p class="carousel-card-description">${project.description || ''}</p>
+                    ${project.scope ? `
+                        <div class="carousel-card-scope">
+                            ${project.scope.map(tag => `<span class="carousel-tag">${tag}</span>`).join('')}
+                        </div>
+                    ` : ''}
+                    <span class="carousel-card-cta">View Gallery</span>
+                </div>
+            </article>
+        </div>
     `).join('');
 
     container.innerHTML = html;
+
+    // Update dots
+    const dotsContainer = document.getElementById('carousel-dots');
+    if (dotsContainer) {
+        dotsContainer.innerHTML = featuredProjects.map((_, index) =>
+            `<button class="carousel-dot ${index === 0 ? 'active' : ''}" data-slide="${index}" aria-label="Slide ${index + 1}"></button>`
+        ).join('');
+    }
+
+    // Initialize carousel controls
+    initCarouselControls(featuredProjects.length);
+
+    // Add click handlers for cards
+    container.querySelectorAll('.carousel-card').forEach(card => {
+        card.addEventListener('click', () => openGallery(card));
+    });
+}
+
+/**
+ * Initialize carousel controls
+ */
+function initCarouselControls(totalSlides) {
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    const dotsContainer = document.getElementById('carousel-dots');
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            goToSlide((currentSlide - 1 + totalSlides) % totalSlides);
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            goToSlide((currentSlide + 1) % totalSlides);
+        });
+    }
+
+    if (dotsContainer) {
+        dotsContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('carousel-dot')) {
+                goToSlide(parseInt(e.target.dataset.slide));
+            }
+        });
+    }
+
+    // Auto-advance carousel
+    startCarouselAutoplay(totalSlides);
+}
+
+/**
+ * Go to specific slide
+ */
+function goToSlide(index) {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+
+    currentSlide = index;
+    resetCarouselAutoplay(slides.length);
+}
+
+/**
+ * Start carousel autoplay
+ */
+function startCarouselAutoplay(totalSlides) {
+    if (carouselInterval) clearInterval(carouselInterval);
+    carouselInterval = setInterval(() => {
+        goToSlide((currentSlide + 1) % totalSlides);
+    }, 5000);
+}
+
+/**
+ * Reset carousel autoplay
+ */
+function resetCarouselAutoplay(totalSlides) {
+    if (carouselInterval) clearInterval(carouselInterval);
+    startCarouselAutoplay(totalSlides);
+}
+
+/**
+ * Open gallery modal
+ */
+function openGallery(card) {
+    const projectId = card.dataset.projectId;
+    const folder = card.dataset.folder;
+    const galleryCount = parseInt(card.dataset.galleryCount) || 0;
+
+    const project = PROJECTS.find(p => p.id === parseInt(projectId));
+    if (!project) return;
+
+    // Build gallery images array
+    currentGalleryImages = [project.image]; // Start with hero image
+
+    // Add numbered gallery images
+    for (let i = 1; i <= galleryCount; i++) {
+        currentGalleryImages.push(`/assets/images/projects/${folder}/${i}.jpg`);
+    }
+
+    currentGalleryIndex = 0;
+
+    // Update modal content
+    const modal = document.getElementById('gallery-modal');
+    const title = document.getElementById('gallery-title');
+    const location = document.getElementById('gallery-location');
+    const image = document.getElementById('gallery-image');
+    const counter = document.getElementById('gallery-counter');
+
+    if (title) title.textContent = project.title;
+    if (location) location.textContent = project.location;
+    if (image) image.src = currentGalleryImages[0];
+    if (counter) counter.textContent = `1 / ${currentGalleryImages.length}`;
+
+    // Show/hide navigation based on image count
+    const prevBtn = document.getElementById('gallery-prev');
+    const nextBtn = document.getElementById('gallery-next');
+    if (prevBtn) prevBtn.style.display = currentGalleryImages.length > 1 ? 'flex' : 'none';
+    if (nextBtn) nextBtn.style.display = currentGalleryImages.length > 1 ? 'flex' : 'none';
+    if (counter) counter.style.display = currentGalleryImages.length > 1 ? 'block' : 'none';
+
+    // Show modal
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Pause carousel
+    if (carouselInterval) clearInterval(carouselInterval);
+}
+
+/**
+ * Navigate gallery
+ */
+function navigateGallery(direction) {
+    currentGalleryIndex = (currentGalleryIndex + direction + currentGalleryImages.length) % currentGalleryImages.length;
+
+    const image = document.getElementById('gallery-image');
+    const counter = document.getElementById('gallery-counter');
+
+    if (image) image.src = currentGalleryImages[currentGalleryIndex];
+    if (counter) counter.textContent = `${currentGalleryIndex + 1} / ${currentGalleryImages.length}`;
+}
+
+/**
+ * Close gallery modal
+ */
+function closeGallery() {
+    const modal = document.getElementById('gallery-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Resume carousel
+    const slides = document.querySelectorAll('.carousel-slide');
+    if (slides.length > 0) {
+        startCarouselAutoplay(slides.length);
+    }
+}
+
+/**
+ * Initialize gallery modal event listeners
+ */
+function initGalleryModal() {
+    const modal = document.getElementById('gallery-modal');
+    const closeBtn = document.getElementById('gallery-close');
+    const prevBtn = document.getElementById('gallery-prev');
+    const nextBtn = document.getElementById('gallery-next');
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeGallery);
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => navigateGallery(-1));
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => navigateGallery(1));
+    }
+
+    // Close on backdrop click
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal || e.target.classList.contains('gallery-backdrop')) {
+                closeGallery();
+            }
+        });
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (!modal || !modal.classList.contains('active')) return;
+
+        if (e.key === 'Escape') closeGallery();
+        if (e.key === 'ArrowLeft') navigateGallery(-1);
+        if (e.key === 'ArrowRight') navigateGallery(1);
+    });
 }
 
 /**
