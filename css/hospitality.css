@@ -722,7 +722,21 @@
     }
 
     .carousel-btn {
-        display: none;
+        width: 36px;
+        height: 36px;
+    }
+
+    .carousel-prev {
+        left: 0.5rem;
+    }
+
+    .carousel-next {
+        right: 0.5rem;
+    }
+
+    .carousel-btn svg {
+        width: 18px;
+        height: 18px;
     }
 
     .carousel-dots {

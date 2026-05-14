@@ -38,9 +38,9 @@
         <div class="container">
             <div class="category-tabs" id="category-tabs">
                 <button class="category-tab active" data-category="all">All</button>
-                <button class="category-tab" data-category="living">Living</button>
-                <button class="category-tab" data-category="dining">Dining</button>
                 <button class="category-tab" data-category="bedroom">Bedroom</button>
+                <button class="category-tab" data-category="dining">Dining</button>
+                <button class="category-tab" data-category="living">Living</button>
             </div>
         </div>
     </section>
@@ -48,13 +48,13 @@
     <!-- Collections Grid -->
     <section class="collections-page">
         <div class="container">
-            <!-- Living Section -->
-            <div class="category-section" id="living-section" data-category="living">
+            <!-- Bedroom Section -->
+            <div class="category-section" id="bedroom-section" data-category="bedroom">
                 <div class="category-header">
-                    <h2 class="category-title">Living</h2>
-                    <p class="category-description">Create inviting spaces where comfort meets sophistication</p>
+                    <h2 class="category-title">Bedroom</h2>
+                    <p class="category-description">Your personal sanctuary of rest and tranquility</p>
                 </div>
-                <div class="subcategory-grid" id="living-grid">
+                <div class="collection-gallery" id="bedroom-gallery">
                     <!-- Populated by JavaScript -->
                 </div>
             </div>
@@ -65,23 +65,49 @@
                     <h2 class="category-title">Dining</h2>
                     <p class="category-description">Elegant settings for memorable gatherings</p>
                 </div>
-                <div class="subcategory-grid" id="dining-grid">
+                <div class="collection-gallery" id="dining-gallery">
                     <!-- Populated by JavaScript -->
                 </div>
             </div>
 
-            <!-- Bedroom Section -->
-            <div class="category-section" id="bedroom-section" data-category="bedroom">
+            <!-- Living Section -->
+            <div class="category-section" id="living-section" data-category="living">
                 <div class="category-header">
-                    <h2 class="category-title">Bedroom</h2>
-                    <p class="category-description">Your personal sanctuary of rest and tranquility</p>
+                    <h2 class="category-title">Living</h2>
+                    <p class="category-description">Create inviting spaces where comfort meets sophistication</p>
                 </div>
-                <div class="subcategory-grid" id="bedroom-grid">
+                <div class="collection-gallery" id="living-gallery">
                     <!-- Populated by JavaScript -->
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Gallery Modal -->
+    <div class="gallery-modal" id="gallery-modal">
+        <div class="gallery-backdrop"></div>
+        <div class="gallery-container">
+            <button class="gallery-close" id="gallery-close" aria-label="Close gallery">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+            <button class="gallery-nav gallery-prev" id="gallery-prev" aria-label="Previous image">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+            <div class="gallery-content">
+                <img id="gallery-image" src="" alt="Gallery image">
+            </div>
+            <button class="gallery-nav gallery-next" id="gallery-next" aria-label="Next image">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </button>
+            <div class="gallery-counter" id="gallery-counter">1 / 1</div>
+        </div>
+    </div>
 
     <!-- CTA Section -->
     <section class="cta-section">

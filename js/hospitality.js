@@ -394,6 +394,7 @@ function initCarouselControls(totalSlides) {
     const prevBtn = document.getElementById('carousel-prev');
     const nextBtn = document.getElementById('carousel-next');
     const dotsContainer = document.getElementById('carousel-dots');
+    const container = document.getElementById('featured-carousel');
 
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
@@ -413,6 +414,36 @@ function initCarouselControls(totalSlides) {
                 goToSlide(parseInt(e.target.dataset.slide));
             }
         });
+    }
+
+    // Touch/swipe support
+    if (container) {
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        container.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        container.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe(totalSlides);
+        }, { passive: true });
+
+        function handleSwipe(total) {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swipe left - next slide
+                    goToSlide((currentSlide + 1) % total);
+                } else {
+                    // Swipe right - previous slide
+                    goToSlide((currentSlide - 1 + total) % total);
+                }
+            }
+        }
     }
 
     // Auto-advance carousel

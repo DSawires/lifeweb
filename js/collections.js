@@ -1,177 +1,78 @@
 /**
  * Life Style - Collections Page
  *
- * COLLECTION DATA
- * ---------------
- * To add a new subcategory, add an object to the appropriate category array.
+ * GALLERY DATA
+ * ------------
+ * To add images to a gallery, add them to the appropriate category array.
+ * Images are displayed in the order they appear in the array.
  *
  * Required fields:
- *   - id: Unique identifier
- *   - name: Subcategory name
- *   - tagline: Short description
- *   - image: Path to image
- *   - itemCount: Number of items in subcategory
+ *   - src: Path to image
+ *   - alt: Alt text for accessibility
  */
 
-const COLLECTIONS = {
-    living: [
-        {
-            id: 'sofas',
-            name: 'Sofas',
-            tagline: 'Statement pieces for every living space',
-            image: '/assets/images/living-room.jpg',
-            itemCount: 24
-        },
-        {
-            id: 'armchairs',
-            name: 'Armchairs',
-            tagline: 'Comfort refined to perfection',
-            image: '/assets/images/project-1.jpg',
-            itemCount: 18
-        },
-        {
-            id: 'coffee-tables',
-            name: 'Coffee Tables',
-            tagline: 'The heart of your living room',
-            image: '/assets/images/project-2.jpg',
-            itemCount: 15
-        },
-        {
-            id: 'tv-units',
-            name: 'TV Units',
-            tagline: 'Modern entertainment solutions',
-            image: '/assets/images/project-3.jpg',
-            itemCount: 12
-        },
-        {
-            id: 'bookcases',
-            name: 'Bookcases & Shelving',
-            tagline: 'Display and organize in style',
-            image: '/assets/images/project-4.jpg',
-            itemCount: 10
-        },
-        {
-            id: 'accent-furniture',
-            name: 'Accent Furniture',
-            tagline: 'Finishing touches that define',
-            image: '/assets/images/about-image.jpg',
-            itemCount: 20
-        }
+const GALLERIES = {
+    bedroom: [
+        { src: '/assets/images/collections/bedroom/1.jpg', alt: 'Bedroom furniture collection' },
+        { src: '/assets/images/collections/bedroom/2.jpg', alt: 'Bedroom furniture collection' },
+        { src: '/assets/images/collections/bedroom/3.jpg', alt: 'Bedroom furniture collection' },
+        { src: '/assets/images/collections/bedroom/4.jpg', alt: 'Bedroom furniture collection' }
     ],
     dining: [
-        {
-            id: 'dining-tables',
-            name: 'Dining Tables',
-            tagline: 'Where memories are made',
-            image: '/assets/images/dining-room.jpg',
-            itemCount: 16
-        },
-        {
-            id: 'dining-chairs',
-            name: 'Dining Chairs',
-            tagline: 'Elegance at every seat',
-            image: '/assets/images/project-1.jpg',
-            itemCount: 22
-        },
-        {
-            id: 'sideboards',
-            name: 'Sideboards & Buffets',
-            tagline: 'Storage meets sophistication',
-            image: '/assets/images/project-2.jpg',
-            itemCount: 14
-        }
+        { src: '/assets/images/collections/dining/1.jpg', alt: 'Dining furniture collection' },
+        { src: '/assets/images/collections/dining/2.jpg', alt: 'Dining furniture collection' },
+        { src: '/assets/images/collections/dining/3.jpg', alt: 'Dining furniture collection' },
+        { src: '/assets/images/collections/dining/4.jpg', alt: 'Dining furniture collection' }
     ],
-    bedroom: [
-        {
-            id: 'beds',
-            name: 'Beds',
-            tagline: 'The foundation of restful nights',
-            image: '/assets/images/bedroom.jpg',
-            itemCount: 20
-        },
-        {
-            id: 'nightstands',
-            name: 'Nightstands',
-            tagline: 'Bedside essentials',
-            image: '/assets/images/project-1.jpg',
-            itemCount: 16
-        },
-        {
-            id: 'dressers',
-            name: 'Dressers & Chests',
-            tagline: 'Organized elegance',
-            image: '/assets/images/project-2.jpg',
-            itemCount: 14
-        },
-        {
-            id: 'wardrobes',
-            name: 'Wardrobes',
-            tagline: 'Space for your finest',
-            image: '/assets/images/project-3.jpg',
-            itemCount: 12
-        },
-        {
-            id: 'vanities',
-            name: 'Vanities',
-            tagline: 'Beauty in preparation',
-            image: '/assets/images/project-4.jpg',
-            itemCount: 8
-        },
-        {
-            id: 'bedroom-seating',
-            name: 'Bedroom Seating',
-            tagline: 'Benches, ottomans & chairs',
-            image: '/assets/images/about-image.jpg',
-            itemCount: 10
-        }
+    living: [
+        { src: '/assets/images/collections/living/1.jpg', alt: 'Living room furniture collection' }
     ]
 };
+
+// Gallery modal state
+let currentGalleryImages = [];
+let currentGalleryIndex = 0;
 
 /**
  * Initialize the collections page
  */
 document.addEventListener('DOMContentLoaded', () => {
-    renderCollections();
+    renderGalleries();
     initCategoryTabs();
+    initGalleryModal();
 });
 
 /**
- * Render all collection grids
+ * Render all gallery grids
  */
-function renderCollections() {
-    Object.keys(COLLECTIONS).forEach(category => {
-        const grid = document.getElementById(`${category}-grid`);
-        if (!grid) return;
+function renderGalleries() {
+    Object.keys(GALLERIES).forEach(category => {
+        const gallery = document.getElementById(`${category}-gallery`);
+        if (!gallery) return;
 
-        const items = COLLECTIONS[category];
-        const html = items.map(item => createSubcategoryCard(item, category)).join('');
-        grid.innerHTML = html;
+        const images = GALLERIES[category];
+        const html = images.map((image, index) => createGalleryItem(image, category, index)).join('');
+        gallery.innerHTML = html;
     });
 }
 
 /**
- * Create subcategory card HTML
+ * Create gallery item HTML
  */
-function createSubcategoryCard(item, category) {
+function createGalleryItem(image, category, index) {
     return `
-        <a href="/collections/${category}/${item.id}/" class="subcategory-card" data-id="${item.id}">
-            <div class="subcategory-image">
-                <img src="${item.image}" alt="${item.name}">
-                <div class="subcategory-overlay">
-                    <span class="subcategory-count">${item.itemCount} Items</span>
-                    <span class="subcategory-cta">
-                        Explore
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </span>
-                </div>
+        <div class="gallery-item" data-category="${category}" data-index="${index}">
+            <img src="${image.src}" alt="${image.alt}" loading="lazy">
+            <div class="gallery-item-overlay">
+                <span class="gallery-item-zoom">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                        <path d="M11 8v6M8 11h6"/>
+                    </svg>
+                </span>
             </div>
-            <div class="subcategory-content">
-                <h3 class="subcategory-name">${item.name}</h3>
-                <p class="subcategory-tagline">${item.tagline}</p>
-            </div>
-        </a>
+        </div>
     `;
 }
 
@@ -242,4 +143,104 @@ function initCategoryTabs() {
             }
         });
     }, { passive: true });
+}
+
+/**
+ * Initialize gallery modal
+ */
+function initGalleryModal() {
+    const modal = document.getElementById('gallery-modal');
+    const closeBtn = document.getElementById('gallery-close');
+    const prevBtn = document.getElementById('gallery-prev');
+    const nextBtn = document.getElementById('gallery-next');
+
+    // Click handlers for gallery items
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const category = item.dataset.category;
+            const index = parseInt(item.dataset.index);
+            openGalleryModal(category, index);
+        });
+    });
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeGalleryModal);
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => navigateGallery(-1));
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => navigateGallery(1));
+    }
+
+    // Close on backdrop click
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal || e.target.classList.contains('gallery-backdrop')) {
+                closeGalleryModal();
+            }
+        });
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (!modal || !modal.classList.contains('active')) return;
+
+        if (e.key === 'Escape') closeGalleryModal();
+        if (e.key === 'ArrowLeft') navigateGallery(-1);
+        if (e.key === 'ArrowRight') navigateGallery(1);
+    });
+}
+
+/**
+ * Open gallery modal
+ */
+function openGalleryModal(category, startIndex) {
+    const modal = document.getElementById('gallery-modal');
+    const image = document.getElementById('gallery-image');
+    const counter = document.getElementById('gallery-counter');
+
+    currentGalleryImages = GALLERIES[category];
+    currentGalleryIndex = startIndex;
+
+    if (image) image.src = currentGalleryImages[currentGalleryIndex].src;
+    if (counter) counter.textContent = `${currentGalleryIndex + 1} / ${currentGalleryImages.length}`;
+
+    // Show/hide navigation
+    const prevBtn = document.getElementById('gallery-prev');
+    const nextBtn = document.getElementById('gallery-next');
+    if (prevBtn) prevBtn.style.display = currentGalleryImages.length > 1 ? 'flex' : 'none';
+    if (nextBtn) nextBtn.style.display = currentGalleryImages.length > 1 ? 'flex' : 'none';
+    if (counter) counter.style.display = currentGalleryImages.length > 1 ? 'block' : 'none';
+
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+/**
+ * Navigate gallery
+ */
+function navigateGallery(direction) {
+    currentGalleryIndex = (currentGalleryIndex + direction + currentGalleryImages.length) % currentGalleryImages.length;
+
+    const image = document.getElementById('gallery-image');
+    const counter = document.getElementById('gallery-counter');
+
+    if (image) image.src = currentGalleryImages[currentGalleryIndex].src;
+    if (counter) counter.textContent = `${currentGalleryIndex + 1} / ${currentGalleryImages.length}`;
+}
+
+/**
+ * Close gallery modal
+ */
+function closeGalleryModal() {
+    const modal = document.getElementById('gallery-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 }
