@@ -117,7 +117,8 @@ const PROJECTS = [
         folder: "mazeej-white-hotel",
         scope: ["Bedroom", "Outdoor"],
         featured: true,
-        galleryCount: 0
+        galleryCount: 5,
+        galleryFormat: "webp"
     },
     {
         id: 11,
