@@ -62,7 +62,7 @@ function renderGalleries() {
 function createGalleryItem(image, category, index) {
     return `
         <div class="gallery-item" data-category="${category}" data-index="${index}">
-            <img src="${image.src}" alt="${image.alt}" loading="lazy">
+            <img src="${image.src}" alt="${image.alt}">
             <div class="gallery-item-overlay">
                 <span class="gallery-item-zoom">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

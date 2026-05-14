@@ -639,7 +639,7 @@ function renderTimeline() {
                 ` : ''}
             </div>
             <div class="timeline-image">
-                <img src="${project.image}" alt="${project.title}" loading="lazy">
+                <img src="${project.image}" alt="${project.title}">
             </div>
         </article>
     `).join('');
