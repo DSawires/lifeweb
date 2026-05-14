@@ -256,40 +256,68 @@ function initSmoothScroll() {
 }
 
 /**
- * Contact form handling
+ * Contact form handling - submits to Formspree
  */
 function initContactForm() {
     const form = document.getElementById('contactForm');
+    if (!form) return;
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // Get form data
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
+        const button = form.querySelector('button[type="submit"]');
+        const originalText = button.textContent;
 
-        // Here you would typically send this to a server
-        console.log('Form submitted:', data);
+        // Show loading state
+        button.textContent = 'Sending...';
+        button.disabled = true;
 
-        // Show success message
-        showFormSuccess(form);
+        try {
+            const response = await fetch('https://formspree.io/f/xojrzrjw', {
+                method: 'POST',
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                showFormSuccess(form, button, originalText);
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            showFormError(form, button, originalText);
+        }
     });
 }
 
 /**
  * Show form success message
  */
-function showFormSuccess(form) {
-    const button = form.querySelector('button[type="submit"]');
-    const originalText = button.textContent;
-
+function showFormSuccess(form, button, originalText) {
     // Update button state
     button.textContent = 'Message Sent!';
     button.style.background = 'linear-gradient(135deg, #4CAF50 0%, #45a049 100%)';
-    button.disabled = true;
 
     // Reset form
     form.reset();
+
+    // Reset button after delay
+    setTimeout(() => {
+        button.textContent = originalText;
+        button.style.background = '';
+        button.disabled = false;
+    }, 3000);
+}
+
+/**
+ * Show form error message
+ */
+function showFormError(form, button, originalText) {
+    // Update button state
+    button.textContent = 'Error - Try Again';
+    button.style.background = 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)';
 
     // Reset button after delay
     setTimeout(() => {

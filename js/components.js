@@ -37,6 +37,9 @@
         // Set active state based on current path
         const currentPath = window.location.pathname;
         navMenu.querySelectorAll('.nav-link').forEach(link => {
+            // Skip CTA buttons - they don't need active state
+            if (link.classList.contains('nav-link-cta')) return;
+
             const href = link.getAttribute('href');
             if (href && href !== '/#contact') {
                 if (currentPath.startsWith(href) && href !== '/') {
